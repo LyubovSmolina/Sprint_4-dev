@@ -1,4 +1,4 @@
-package ru.praktikum;
+package ru.praktikum.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -42,7 +42,7 @@ public class PersonalData {
         return this;
     }
 
-    //Клик по кнопке заказа в хедере страницы
+    //Клик по кнопке заказа страницы
     public void clickOrderButtonHeader(WebDriver driver) {
 
         driver.findElement(orderButtonHeader).click();

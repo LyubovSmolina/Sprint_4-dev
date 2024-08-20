@@ -8,18 +8,15 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import ru.praktikum.AboutRent;
-import ru.praktikum.MainPage;
-import ru.praktikum.PersonalData;
+import ru.praktikum.PageObject.AboutRent;
+import ru.praktikum.PageObject.MainPage;
+import ru.praktikum.PageObject.PersonalData;
 import java.time.Duration;
 import static org.junit.Assert.assertEquals;
 
 
 public class orderScooterTestChrome {
     private static WebDriver driver;
-
-
 
     @RunWith(Parameterized.class)
     public static class ScooterTest {
@@ -47,7 +44,8 @@ public class orderScooterTestChrome {
         }
 
         @Before //Прогон тестов осуществляется с бразуера Chrome
-        public void startChrome() {
+
+       public void startChrome() {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
